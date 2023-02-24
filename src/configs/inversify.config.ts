@@ -29,7 +29,7 @@ const bindings = new ContainerModule((bind: interfaces.Bind) => {
 	bind<PageController>(TYPES.PageController).to(PageController).inSingletonScope();
 	bind<PageService>(TYPES.PageService).to(PageService).inSingletonScope();
 	bind<PageRepository>(TYPES.PageRepository).to(PageRepository).inSingletonScope();
-	bind<IConfig>(TYPES.Config).to(Config).inSingletonScope();
+	bind<IConfig>(TYPES.Config).to(Config);
 	bind<IDatabase>(TYPES.Database).to(Database).inSingletonScope();
 	bind<Application>(TYPES.Application).to(Application).inSingletonScope();
 });
