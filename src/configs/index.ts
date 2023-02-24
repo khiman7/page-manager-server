@@ -10,7 +10,7 @@ export class Config implements IConfig {
 	private config: DotenvParseOutput;
 
 	constructor(@inject(TYPES.Logger) private logger: ILogger) {
-		const { parsed, error } = config();
+		const { parsed, error } = config({ debug: true });
 
 		if (error) {
 			this.logger.error('❌ [CONFIG] Unable to read .env file');
